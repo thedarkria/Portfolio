@@ -1,0 +1,82 @@
+body {
+    background-color:#D8D6C4;
+    padding: 0%;
+    margin: 0%;
+}
+ 
+p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #464A3C;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+h3 {
+    display: block;
+    margin: 1rem;
+    text-align: center;
+    color: #A1A1A6;
+}
+
+.intro-heading {
+    display: block;
+    margin: auto;
+    text-align: center;
+    color: #464A3C;
+    width: 70%;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+hr {
+    border-style: none;
+    border-top: dotted #A1A1A6;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+    margin-left: 35%;
+    margin-right: 35%;
+    width: 30%;
+    border-width: 1rem;
+}
+
+.personal-picture > img {
+    display: block;
+    margin: auto;
+    margin-top: 3rem;
+    width: 16rem;
+    border-style: solid;
+    border-color: #464A3C;
+    border-width: 5px;
+    object-fit: fill;
+    border-radius: 20%; 
+    object-fit: contain;
+}
+
+.midsection {
+    display: grid;
+    border-radius: 5%;
+    gap: 0.5rem;
+    background-color: #A1A1A6;
+    margin: 1rem;
+    padding: 0.5rem;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(4, 10rem);
+}
+.midsection-item {
+    border-radius: 5%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.midsection-item > img {
+    border-color:#464A3C;
+    border-style: solid;
+    height: 100%;
+    width: 100%;
+    border-radius: 5%;
+}
