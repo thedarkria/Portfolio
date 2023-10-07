@@ -1,5 +1,8 @@
 body {
-    background-color:#D8D6C4;
+    background-image: url("images/michigan.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     padding: 0%;
     margin: 0%;
 }
@@ -7,20 +10,33 @@ body {
 p {
     font-size: 0.9rem;
     font-weight: 600;
-    color: #464A3C;
+    color: #4F5061;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
     font-size: 4rem;
+    letter-spacing: 0.1rem;
     font-weight: 600;
 }
 
+h2 {
+    letter-spacing: 0.15rem;
+}
+
 h3 {
+    font-size: 2rem;
     display: block;
     margin: 1rem;
     text-align: center;
-    color: #A1A1A6;
+    color: #D2C4CD;
+    letter-spacing: 0.08rem;
+    text-shadow:
+    2px 1px 0 #AFC0DD,
+    -2px 1px 0  #4F5061,
+    -2px -1px 0 #AFC0DD,
+    2px -1px 0 #AFC0DD;
+
 }
 
 .header {
@@ -33,7 +49,7 @@ h3 {
 }
 
 .header button {
-    background-color: #464A3C;
+    background-color: #AFC0DD;
     height: 5rem;
     width: 5rem;
     border-style: outset;
@@ -47,10 +63,8 @@ h3 {
     font-size: 1rem;
     text-align: center;
     justify-content: center;
-    color: #A1A1A6;
+    color: #4F5061;
 }
-
-
 
 img {
     margin: auto;
@@ -63,15 +77,19 @@ img {
     display: block;
     margin: auto;
     text-align: center;
-    color: #464A3C;
+    color:#AFC0DD;
     width: 70%;
     font-family: Arial, Helvetica, sans-serif;
-
+    text-shadow:
+    2px 1px 0 #4F5061,
+    -2px 1px 0 #4F5061,
+    -2px -1px 0 #A1A1A6,
+    2px -1px 0 #A1A1A6;
 }
 
 hr {
     border-style: none;
-    border-top: dotted #A1A1A6;
+    border-top: dotted #4F5061;
     margin-bottom: 4rem;
     margin-top: 4rem;
     margin-left: 35%;
@@ -86,7 +104,7 @@ hr {
     margin-top: 3rem;
     width: 16rem;
     border-style: solid;
-    border-color: #464A3C;
+    border-color: #98A6C5;
     border-width: 5px;
     object-fit: fill;
     border-radius: 20%; 
@@ -97,7 +115,7 @@ hr {
     display: grid;
     border-radius: 5%;
     gap: 0.5rem;
-    background-color: #A1A1A6;
+    background-color: #D2C4CD;
     margin: 1rem;
     padding: 0.5rem;
     grid-template-columns: repeat(2,1fr);
@@ -119,6 +137,18 @@ hr {
     border-radius: 5%;
 }
 
+.resume-container {
+    display: block;
+    margin: auto;
+    background-color:#D2C4CD;
+    height: 20rem;
+    width: 90%;
+    border-radius: 20%;
+}
+
+
+
+
 @media screen and (max-width: 400px) {
     p {
         font-size: 0.7rem;
@@ -135,20 +165,22 @@ hr {
         align-items: center;
         justify-content: center;
     }
+
+    .header button {
+        height: 4rem;
+        width: 4rem;
+        font-size: 0.8rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
 }
 
 @media screen and (min-width: 1000px){
     .personal-picture > img {
-        display: block;
-        margin: auto;
-        margin-top: 3rem;
-        width: 16rem;
-        border-style: solid;
-        border-color: #464A3C;
-        border-width: 5px;
-        object-fit: fill;
         border-radius: 50%; 
-        object-fit: contain;
+        width: 20rem;
     }
 
     p {
@@ -163,7 +195,7 @@ hr {
         border-radius: 5%;
         gap: 0.7rem;
         background-color: #A1A1A6;
-        margin: 15rem;
+        margin: 10rem;
         padding: 0.8rem;
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: repeat(4, 10rem);
@@ -176,5 +208,10 @@ hr {
         text-align: center;
         align-items: center;
         justify-content: center;
+    }
+
+    .resume-container {
+        width: 60%;
+        border-radius: 20%
     }
 }
