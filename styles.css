@@ -5,7 +5,7 @@ body {
 }
  
 p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: #464A3C;
     font-family: Arial, Helvetica, sans-serif;
@@ -22,6 +22,42 @@ h3 {
     text-align: center;
     color: #A1A1A6;
 }
+
+.header {
+    display: flex;
+    flex-direction: row;
+    height: 20vh;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header button {
+    background-color: #464A3C;
+    height: 5rem;
+    width: 5rem;
+    border-style: outset;
+    border-radius: 20%;
+    margin-left: 1rem;
+}
+
+.resume {
+    margin-right: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    justify-content: center;
+    color: #A1A1A6;
+}
+
+
+
+img {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
 
 .intro-heading {
     display: block;
@@ -69,6 +105,8 @@ hr {
 }
 .midsection-item {
     border-radius: 5%;
+    height: 10rem;
+    width: auto;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -79,4 +117,64 @@ hr {
     height: 100%;
     width: 100%;
     border-radius: 5%;
+}
+
+@media screen and (max-width: 400px) {
+    p {
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: #464A3C;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .midsection-item {
+        border-radius: 8%;
+        height: 9rem;
+        width: auto;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .personal-picture > img {
+        display: block;
+        margin: auto;
+        margin-top: 3rem;
+        width: 16rem;
+        border-style: solid;
+        border-color: #464A3C;
+        border-width: 5px;
+        object-fit: fill;
+        border-radius: 50%; 
+        object-fit: contain;
+    }
+
+    p {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #464A3C;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .midsection {
+        display: grid;
+        border-radius: 5%;
+        gap: 0.7rem;
+        background-color: #A1A1A6;
+        margin: 15rem;
+        padding: 0.8rem;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4, 10rem);
+    }
+
+    .midsection-item {
+        border-radius: 8%;
+        height: 9rem;
+        width: auto;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
 }
