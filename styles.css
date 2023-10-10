@@ -1,8 +1,6 @@
 body {
-    background-image: url("images/michigan.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    text-align: center;
+    background-color: #4F5061;
     padding: 0%;
     margin: 0%;
 }
@@ -15,71 +13,11 @@ p {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 6rem;
     letter-spacing: 0.1rem;
     font-weight: 600;
-}
-
-h2 {
-    letter-spacing: 0.15rem;
-}
-
-h3 {
-    font-size: 2rem;
-    display: block;
-    margin: 1rem;
-    text-align: center;
-    color: #D2C4CD;
-    letter-spacing: 0.08rem;
-    text-shadow:
-    2px 1px 0 #AFC0DD,
-    -2px 1px 0  #4F5061,
-    -2px -1px 0 #AFC0DD,
-    2px -1px 0 #AFC0DD;
-
-}
-
-.header {
-    display: flex;
-    flex-direction: row;
-    height: 20vh;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header button {
-    background-color: #AFC0DD;
-    height: 5rem;
-    width: 5rem;
-    border-style: outset;
-    border-radius: 20%;
-    margin-left: 1rem;
-}
-
-.resume {
-    margin-right: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-    text-align: center;
-    justify-content: center;
-    color: #4F5061;
-}
-
-img {
     margin: auto;
-    width: 100%;
-    height: 100%;
-}
-
-
-.intro-heading {
-    display: block;
-    margin: auto;
-    text-align: center;
     color:#AFC0DD;
-    width: 70%;
-    font-family: Arial, Helvetica, sans-serif;
     text-shadow:
     2px 1px 0 #4F5061,
     -2px 1px 0 #4F5061,
@@ -87,28 +25,92 @@ img {
     2px -1px 0 #A1A1A6;
 }
 
-hr {
-    border-style: none;
-    border-top: dotted #4F5061;
-    margin-bottom: 4rem;
+
+h3 {
+    font-size: 3rem;
     margin-top: 4rem;
-    margin-left: 35%;
-    margin-right: 35%;
-    width: 30%;
-    border-width: 1rem;
+    text-align: center;
+    color: #98A6C5;
+
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    height: 15vh;
+    width: 100%;
+    justify-content: space-between;
+    max-width: 95%;
+    align-items: center;
+    margin: auto;
+    margin-bottom: -2rem;
+}
+
+.header button {
+    height: 4rem;
+    width: 9rem;
+    border-style: none;
+    border-radius: 20%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #4F5061;
+    text-align: center;
+    font-weight: 600;
+    color: #98A6C5;
+}
+.header button:hover {
+    background-color: #98A6C5;
+    text-decoration: underline;
+    color: #4F5061;
+    border-style: inset;
+}
+
+.intro-heading {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 15px;
+    color:#AFC0DD;
+    width: 90%;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+}
+
+.intro-box {
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.upper-left {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.upper-right {
+    grid-column: 2;
+    grid-row: 1 / 3;
+}
+
+hr {
+    border: 0;
+    height: 4px;
+    width: 95%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(152, 166, 197, 0.90), rgba(0, 0, 0, 0));
+    margin: 2rem
 }
 
 .personal-picture > img {
     display: block;
     margin: auto;
-    margin-top: 3rem;
-    width: 16rem;
+    width: 100%;
+    object-fit: fill;
     border-style: solid;
     border-color: #98A6C5;
-    border-width: 5px;
-    object-fit: fill;
+    border-width: 15px;
     border-radius: 20%; 
-    object-fit: contain;
 }
 
 .midsection {
@@ -116,8 +118,9 @@ hr {
     border-radius: 5%;
     gap: 0.5rem;
     background-color: #D2C4CD;
-    margin: 1rem;
     padding: 0.5rem;
+    margin: auto;
+    width: 80%;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(4, 10rem);
 }
@@ -126,9 +129,8 @@ hr {
     height: 10rem;
     width: auto;
     text-align: center;
-    align-items: center;
-    justify-content: center;
 }
+
 .midsection-item > img {
     border-color:#464A3C;
     border-style: solid;
@@ -139,17 +141,42 @@ hr {
 
 .resume-container {
     display: block;
+    padding-top: 5%;
     margin: auto;
-    background-color:#D2C4CD;
+    background-color:#AFC0DD;
     height: 20rem;
     width: 90%;
     border-radius: 20%;
 }
 
+.title-container {
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    width: 80%;
+    height: 60px;
+}
+
+
+.title-container > h3 {
+    margin-top: 0rem;
+    }
 
 
 
-@media screen and (max-width: 400px) {
+
+@media screen and (max-width: 600px) {
+
+    .intro-heading {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+    color:#AFC0DD;
+    width: 70%;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
     p {
         font-size: 0.7rem;
         font-weight: 600;
@@ -158,6 +185,7 @@ hr {
     }
 
     .midsection-item {
+        display: block;
         border-radius: 8%;
         height: 9rem;
         width: auto;
@@ -168,21 +196,20 @@ hr {
 
     .header button {
         height: 4rem;
-        width: 4rem;
+        width: 8rem;
         font-size: 0.8rem;
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 5rem;
+    }
+
+    .header button {
+        font-size: 1.3rem;
     }
 }
 
 @media screen and (min-width: 1000px){
-    .personal-picture > img {
-        border-radius: 50%; 
-        width: 20rem;
-    }
-
     p {
         font-size: 1.1rem;
         font-weight: 600;
@@ -190,28 +217,32 @@ hr {
         font-family: Arial, Helvetica, sans-serif;
     }
 
+    h1{
+        font-size: 10rem;
+    }
+
     .midsection {
         display: grid;
         border-radius: 5%;
+        min-height: 700px;
         gap: 0.7rem;
-        background-color: #A1A1A6;
-        margin: 10rem;
+        max-width: 60%;
         padding: 0.8rem;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2,);
         grid-template-rows: repeat(4, 10rem);
     }
 
     .midsection-item {
-        border-radius: 8%;
-        height: 9rem;
-        width: auto;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
+        min-height: 180px;
+
     }
 
     .resume-container {
+        display: block;
+        justify-content: center;
+        align-items: center;
         width: 60%;
         border-radius: 20%
     }
 }
+
